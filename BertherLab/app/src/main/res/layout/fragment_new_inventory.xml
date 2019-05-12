@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".Activities.NewInventoryFragment" android:id="@+id/constraintLayout"
+                                                   android:background="#0000BCD4">
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/inventoryNameText" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/dateText"
+            app:layout_constraintVertical_bias="0.869" android:backgroundTint="#FF5722" android:hint="Nombre"/>
+    <TextView
+            android:text="Nuevo Inventario"
+            android:layout_width="195dp"
+            android:layout_height="47dp"
+            android:id="@+id/textView4" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/inventoryNameText" android:textSize="25sp"
+            android:textColor="#F44336" app:layout_constraintVertical_bias="0.74"
+            app:layout_constraintHorizontal_bias="0.497"/>
+    <TextView
+            android:layout_width="207dp"
+            android:layout_height="46dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/dateText" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/saveInventoryButton"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.835" android:drawableTint="#FF5722" android:backgroundTint="#FF5722"
+            android:hint="Fecha" android:textSize="18sp"/>
+    <Button
+            android:text="Guardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/saveInventoryButton" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.501" app:layout_constraintVertical_bias="0.755"
+            android:backgroundTint="#B5FF5722"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:src="@android:drawable/ic_menu_revert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:id="@+id/newInventoryBackButton" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.061"
+            app:layout_constraintVertical_bias="0.027"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

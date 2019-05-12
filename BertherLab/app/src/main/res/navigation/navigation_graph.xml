@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation_graph"
+            app:startDestination="@id/collectionFragment">
+    <fragment android:id="@+id/newProductFragment2" android:name="com.example.bertherlab.Activities.NewProductFragment"
+              android:label="fragment_new_product" tools:layout="@layout/fragment_new_product">
+        <action android:id="@+id/toInventory"
+                app:destination="@id/inventoryFragment"/>
+    </fragment>
+    <fragment android:id="@+id/inventoryFragment" android:name="com.example.bertherlab.Activities.InventoryFragment"
+              android:label="fragment_inventory" tools:layout="@layout/fragment_inventory">
+        <action android:id="@+id/toNewProduct"
+                app:destination="@id/newProductFragment2"/>
+        <action android:id="@+id/toCollection"
+                app:destination="@id/collectionFragment"/>
+    </fragment>
+    <fragment android:id="@+id/QRFragment" android:name="com.example.bertherlab.Activities.QRFragment" android:label="fragment_qr"
+              tools:layout="@layout/fragment_qr"/>
+    <fragment android:id="@+id/collectionFragment" android:name="com.example.bertherlab.Activities.CollectionFragment"
+              android:label="fragment_collection" tools:layout="@layout/fragment_collection">
+        <action android:id="@+id/toInventory"
+                app:destination="@id/inventoryFragment"/>
+        <action android:id="@+id/toNewInventory"
+                app:destination="@id/newInventoryFragment"/>
+    </fragment>
+    <fragment android:id="@+id/newInventoryFragment" android:name="com.example.bertherlab.Activities.NewInventoryFragment"
+              android:label="fragment_new_inventory" tools:layout="@layout/fragment_new_inventory">
+        <action android:id="@+id/toCollection"
+                app:destination="@id/collectionFragment"/>
+    </fragment>
+</navigation>
